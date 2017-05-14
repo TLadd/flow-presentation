@@ -1,0 +1,3 @@
+type ObjType = { property: string };
+let obj = { property: "value" };
+let test: ObjType = obj;
