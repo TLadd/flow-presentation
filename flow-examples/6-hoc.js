@@ -2,12 +2,12 @@
 
 import React from 'react'
 
-type FunctionComponent<P> = (P) => ?React$Element<any>
+// type FunctionComponent<P> = (P) => ?React$Element<any>
 type ClassComponent<D, P, S> = Class<React$Component<D, P, S>>
 
-type AnyComponent<P> = ClassComponent<any, P, any> | FunctionComponent<P>;
+// type AnyComponent<P> = ClassComponent<any, P, any> | FunctionComponent<P>
 
-function addProps<InputProps: {}, AdditionalProps: {}>(additionalProps: AdditionalProps): (component: AnyComponent<InputProps & AdditionalProps>) => ClassComponent<void, InputProps, void> {
+function addProps<InputProps: {}, AdditionalProps: {}>(additionalProps: AdditionalProps): (component: ClassComponent<any, InputProps & AdditionalProps, any>) => ClassComponent<void, InputProps, void> {
   return (component) => {
     class MapPropsWrapper extends React.Component {
       props: InputProps;

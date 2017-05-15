@@ -67,7 +67,9 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgImage={images.flo.replace("/", "")} />
-        <Slide bgImage={images.flow.replace("/", "")} />
+        <Slide>
+          <Image style={{ width: '100%' }} src={images.flow.replace("/", "")} />
+        </Slide>
         <Slide bgColor="primary">
           <Heading size={6} textColor="secondary" caps>Why Use Flow?</Heading>
           <List>
@@ -84,6 +86,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
+        { /*
         <Slide bgColor="primary">
           <Heading size={6} textColor="secondary" caps>Flow vs. Other Type Systems</Heading>
           <List>
@@ -97,9 +100,11 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>If it passes, hard to have runtime errors</ListItem></Appear>
           </List>
         </Slide>
+        */ }
         <Slide>
           <Text textSize={70}>Examples</Text>
         </Slide>
+        { /*
         <Slide bgColor="primary">
           <Heading size={6} textColor="secondary" caps>Flow vs. Typescript</Heading>
           <List>
@@ -110,6 +115,7 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>Flow generally is stricter</ListItem></Appear>
           </List>
         </Slide>
+        */ }
         <Slide bgColor="primary">
           <Heading size={6} textColor="secondary" caps>Setup</Heading>
           <List>
@@ -164,7 +170,6 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>Class method binding</ListItem></Appear>
             <Appear><ListItem>jsx children syntax</ListItem></Appear>
             <Appear><ListItem>HOCs</ListItem></Appear>
-            <Appear><ListItem>Sharing types between packages a little hacky</ListItem></Appear>
             <Appear><ListItem>Flow checks node_modules, so may have to ignore packages that have type errors</ListItem></Appear>
             <Appear><ListItem>Not always obvious if typing is incorrect or flow bug</ListItem></Appear>
             <Appear><ListItem>Documentation on some higher-level features hard to come by</ListItem></Appear>
@@ -174,6 +179,7 @@ export default class Presentation extends React.Component {
           <Heading size={6} textColor="secondary" caps>Tradeoffs</Heading>
           <Appear>
             <List>
+              <Text>Good</Text>
               <ListItem>Documentation</ListItem>
               <ListItem>IDE Integrations</ListItem>
               <ListItem>
@@ -187,6 +193,7 @@ export default class Presentation extends React.Component {
           </Appear>
           <Appear>
             <List>
+              <Text size={5}>Bad</Text>
               <ListItem>Early frustrations</ListItem>
               <ListItem>Time to learn flow and accurately type files</ListItem>
             </List>
